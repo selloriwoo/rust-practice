@@ -3,7 +3,9 @@ mod method_f;
 mod enum_f;
 mod match_f;
 mod iflet_f;
+pub mod garden;
 
+use crate::garden::vegetables::Asparagus;
 use crate::struct_f::stfile;
 use crate::method_f::method_file;
 use crate::enum_f::enum_file;
