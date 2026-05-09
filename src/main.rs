@@ -7,6 +7,7 @@ mod vector_f;
 mod string_f;
 mod hash_map_f;
 mod panic_f;
+mod trait_f;
 
 pub mod garden;
 
@@ -22,6 +23,7 @@ use crate::vector_f::vector_file;
 use crate::string_f::string_file;
 use crate::hash_map_f::hash_map_file;
 use crate::panic_f::painc_file;
+use crate::trait_f::traint_file;
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -42,5 +44,6 @@ fn main() {
     // iflet_file();
     // vector_file();
     // hash_map_file();
-    painc_file();
+    // painc_file();
+    traint_file();
 }
