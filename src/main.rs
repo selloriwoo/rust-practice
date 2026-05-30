@@ -9,6 +9,7 @@ mod hash_map_f;
 mod panic_f;
 mod trait_f;
 mod life_time_f;
+mod closer_f;
 
 pub mod garden;
 
@@ -26,6 +27,7 @@ use crate::hash_map_f::hash_map_file;
 use crate::panic_f::painc_file;
 use crate::trait_f::traint_file;
 use crate::life_time_f::life_time_file;
+use crate::closer_f::closer_file;
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -48,5 +50,6 @@ fn main() {
     // hash_map_file();
     // painc_file();
     // traint_file();
-    life_time_file();
+    // life_time_file();
+    closer_file();
 }
