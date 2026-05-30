@@ -10,6 +10,7 @@ mod panic_f;
 mod trait_f;
 mod life_time_f;
 mod closer_f;
+mod iterator_f;
 
 pub mod garden;
 
@@ -28,6 +29,7 @@ use crate::panic_f::painc_file;
 use crate::trait_f::traint_file;
 use crate::life_time_f::life_time_file;
 use crate::closer_f::closer_file;
+use crate::iterator_f::iterator_file;
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -51,5 +53,6 @@ fn main() {
     // painc_file();
     // traint_file();
     // life_time_file();
-    closer_file();
+    // closer_file();
+    iterator_file();
 }
