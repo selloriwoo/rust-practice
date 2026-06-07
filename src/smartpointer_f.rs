@@ -1,5 +1,5 @@
-use crate::smartpointer_f::List::Cons;
-//or use List::{Cons, Nil};
+use crate::smartpointer_f::List::{Cons, Nil} ;
+// use List::{Cons, Nil};
 enum List {
     Cons(i32, Box<List>),
     Nil,
