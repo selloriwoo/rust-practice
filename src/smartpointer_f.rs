@@ -44,6 +44,14 @@ enum List2 {
 
 use std::rc::Rc;
 
+use std::cell::RefCell;
+#[derive(Debug)]
+enum List3 {
+    Cons(Rc<RefCell<i32>>, Rc<List3>),
+    Nil,
+}
+
+
 pub fn smartpointer_file() {
     let b = Box::new(5);
     println!("box ={b}");
@@ -90,4 +98,19 @@ pub fn smartpointer_file() {
         println!("count after creating c = {}", Rc::strong_count(&a));
     }
     println!("count after c goes out of scope = {}", Rc::strong_count(&a));
+
+
+    //Refcell
+    let value = Rc::new(RefCell::new(5));
+
+    let a = Rc::new(List3::Cons(Rc::clone(&value), Rc::new(List3::Nil)));
+
+    let b = List3::Cons(Rc::new(RefCell::new(3)), Rc::clone(&a));
+    let c = List3::Cons(Rc::new(RefCell::new(4)), Rc::clone(&a));
+
+    *value.borrow_mut() += 10;
+
+    println!("a after = {a:?}");
+    println!("b after = {b:?}");
+    println!("c after = {c:?}");
 }
