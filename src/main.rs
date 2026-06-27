@@ -12,6 +12,7 @@ mod life_time_f;
 mod closer_f;
 mod iterator_f;
 mod smartpointer_f;
+mod thread_f;
 
 pub mod garden;
 
@@ -32,6 +33,7 @@ use crate::life_time_f::life_time_file;
 use crate::closer_f::closer_file;
 use crate::iterator_f::iterator_file;
 use crate::smartpointer_f::smartpointer_file;
+use crate::thread_f::thread_file;
 
 #[derive(Debug)]
 struct Rectangle {
@@ -58,5 +60,6 @@ fn main() {
     // life_time_file();
     // closer_file();
     // iterator_file();
-    smartpointer_file();
+    // smartpointer_file();
+    thread_file();
 }
